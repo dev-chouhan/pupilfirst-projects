@@ -1,0 +1,19 @@
+<h2>Programming languages</h2>
+
+<ul id="languages"></ul>
+
+<script>
+    let lang = ["kotlin", "python", "mongoose", "rust", "bash"];
+    let result = [];
+
+    let createLang = value =>{
+        let element = "<li>" + value + "</li>";
+        result.push(element);
+    }
+
+    lang.forEach(createLang);
+    let html = result.join("\n");
+
+
+    document.getElementById("languages").innerHTML = html;
+</script>
