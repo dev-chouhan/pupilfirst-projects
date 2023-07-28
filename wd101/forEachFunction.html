@@ -4,16 +4,19 @@
 
 <script>
     let lang = ["kotlin", "python", "mongoose", "rust", "bash"];
-    let result = [];
+    // let result = [];
 
-    let createLang = value =>{
-        let element = "<li>" + value + "</li>";
-        result.push(element);
-    }
+    // let createLang = value =>{
+    //     let element = "<li>" + value + "</li>";
+    //     result.push(element);
+    // }
 
-    lang.forEach(createLang);
-    let html = result.join("\n");
+    // lang.forEach(createLang);
+    // let html = result.join("\n");
+
+    let createListItem = (value) => "<li>" + value + "</li>";
+    let result = lang.map(createListItem);
 
 
-    document.getElementById("languages").innerHTML = html;
+    document.getElementById("languages").innerHTML = result.join("\n");
 </script>
